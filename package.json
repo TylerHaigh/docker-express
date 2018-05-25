@@ -1,7 +1,11 @@
 {
   "name": "hello-docker-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample express app to test Docker",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TylerHaigh/docker-express.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
