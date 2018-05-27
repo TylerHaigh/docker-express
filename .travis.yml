@@ -5,3 +5,9 @@ script: npm test
 cache:
   directories:
     - node_modules
+deploy:
+  provider: script
+  script:
+      curl -H "Content-Type: application/json" --date '{"build": true}' -X POST $DOCKER_TRIGGER_URL
+  on:
+    branch: master
