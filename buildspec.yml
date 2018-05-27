@@ -4,9 +4,10 @@ phases:
   install:
     commands:
       - npm install
-build:
-    commands:
+  build:
+      commands:
       - npm test
 cache:
   paths:
     - node_modules
+    
