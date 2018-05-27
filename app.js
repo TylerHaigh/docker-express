@@ -1,6 +1,6 @@
 const express = require('express');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 //const HOST = '0.0.0.0'
 
 
@@ -11,3 +11,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+module.exports = {app};
