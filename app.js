@@ -16,6 +16,13 @@ app.get('/healthz', (req, res) => {
     res.send('OK');
 });
 
+// Example endpoint to test Kubernetes environment variable
+// based secret.
+app.get('/envuser', (req, res) => {
+    const uname = process.env.SECRET_USERNAME
+    res.send('SECRET_USERNAME: ' + uname);
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 module.exports = {app};
